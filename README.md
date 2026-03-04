@@ -6,15 +6,18 @@ Small React + TypeScript exercises to practice UI components.
 - React + TypeScript (Vite)
 - SWC
 
+## Components
+
+Counter (useState)
+## Preview
+![Counter](docs/counter.png)
+
+Tabs (planned)
+
+Modal (planned)
+
 ## Getting started
 ```bash
 npm install
 npm run dev
 
-Components
-
-Counter (useState)
-
-Tabs (planned)
-
-Modal (planned)
