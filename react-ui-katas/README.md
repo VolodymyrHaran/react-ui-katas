@@ -61,3 +61,35 @@ const [activeTab, setActiveTab] = useState(0);
   activeIndex={activeTab}
   onChange={setActiveTab}
 />
+```
+
+## Getting started
+Install dependencies:
+```bash
+npm install
+```
+Start development server:
+```bash
+npm run dev
+```
+Open in browser:
+```bash
+http://localhost:5173
+```
+
+## Learning goals
+This repository is used to practice:
+- React component architecture
+- TypeScript typing
+- state management
+- reusable UI components
+- keyboard accessibility
+- controlled vs uncontrolled components
+Future components planned:
+- Modal
+- Accordion
+- Dropdown
+- Tooltip
+
+## Autor
+Volodymyr Haran
