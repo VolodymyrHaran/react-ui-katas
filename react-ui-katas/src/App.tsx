@@ -3,18 +3,9 @@ import { Tabs } from "./components/Tabs";
 
 function App() {
   const tabs = [
-    {
-      label: "Tab 1",
-      content: <p>This is tab 1 content</p>,
-    },
-    {
-      label: "Tab 2",
-      content: <p>This is tab 2 content</p>,
-    },
-    {
-      label: "Tab 3",
-      content: <p>This is tab 3 content</p>,
-    },
+    { label: "Profile", content: <p>Profile content</p> },
+    { label: "Settings", content: <p>Settings content</p>, disabled: true },
+    { label: "Billing", content: <p>Billing content</p> }
   ];
 
   return (
@@ -23,7 +14,7 @@ function App() {
 
       <Counter />
 
-      <Tabs tabs={tabs} />
+      <Tabs tabs={tabs} defaultIndex={2} />
     </div>
   );
 }
