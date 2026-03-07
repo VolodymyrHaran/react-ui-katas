@@ -82,7 +82,45 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     <p>Hello from modal</p>
 </Modal>
 ```
+### Accordion
 
+Expandable sections component used to practice dynamic UI state.
+
+Features:
+
+- toggle sections open / closed
+- support multiple open sections
+- optional single mode
+- default open sections
+- state-driven UI
+
+Example usage:
+
+```tsx
+<Accordion
+  items={[
+    {
+      title: "Section 1",
+      content: <p>Section 1 content</p>
+    },
+    {
+      title: "Section 2",
+      content: <p>Section 2 content</p>
+    },
+    {
+      title: "Section 3",
+      content: <p>Section 3 content</p>
+    }
+  ]}
+/>
+```
+Single mode:
+```tsx
+<Accordion
+  items={items}
+  multiple={false}
+/>
+```
 
 ## Getting started
 Install dependencies:
@@ -107,8 +145,6 @@ This repository is used to practice:
 - keyboard accessibility
 - controlled vs uncontrolled components
 Future components planned:
-- Modal
-- Accordion
 - Dropdown
 - Tooltip
 

@@ -33,7 +33,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0, 0, 0, 0.5)",
+        background: "#01a33d80",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
