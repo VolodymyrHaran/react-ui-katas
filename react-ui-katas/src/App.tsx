@@ -1,27 +1,48 @@
+import { useState } from "react";
 import { Counter } from "./components/Counter";
 import { Tabs } from "./components/Tabs";
-import { useState } from "react";
+import { Modal } from "./components/Modal";
+
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const tabs = [
-    { label: "Profile", content: <p>Profile content</p> },
-    { label: "Settings", content: <p>Settings content</p>, disabled: true },
-    { label: "Billing", content: <p>Billing content</p> }
+    {
+      label: "Tab 1",
+      content: <p>This is tab 1 content</p>,
+    },
+    {
+      label: "Tab 2",
+      content: <p>This is tab 2 content</p>,
+      disabled: true,
+    },
+    {
+      label: "Tab 3",
+      content: <p>This is tab 3 content</p>,
+    },
   ];
-  const [tab, setTab] = useState(1);
-  
+
   return (
     <div>
       <h1>React UI Katas</h1>
 
       <Counter />
 
-      <Tabs tabs={tabs} defaultIndex={2} />
+      <Tabs tabs={tabs} defaultIndex={0} />
 
-      <Tabs
-        tabs={tabs}
-        activeIndex={tab}
-        onChange={setTab}
-      />
+      <div style={{ marginTop: "20px" }}>
+        <button onClick={() => setIsModalOpen(true)}>
+          Open modal
+        </button>
+      </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
+        <h2>My modal</h2>
+        <p>Hello from modal</p>
+      </Modal>
     </div>
   );
 }

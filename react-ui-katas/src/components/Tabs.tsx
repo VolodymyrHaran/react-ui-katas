@@ -72,7 +72,11 @@ export function Tabs({
       </div>
 
       <div style={{ marginTop: "20px" }}>
-        {tabs[activeIndex].content}
+        {tabs.length === 0 ? (
+          <div>No tabs available</div>
+        ) : (
+          tabs[activeIndex].content
+        )}
       </div>
     </div>
   );

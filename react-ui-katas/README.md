@@ -62,6 +62,27 @@ const [activeTab, setActiveTab] = useState(0);
   onChange={setActiveTab}
 />
 ```
+### Modal
+
+Reusable modal component.
+
+Features:
+- controlled open/close state
+- children support
+- close button
+- close on overlay click
+- close on Escape key
+
+```tsx
+const [isModalOpen, setIsModalOpen] = useState(false);
+<Modal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}>
+    <h2>My modal</h2>
+    <p>Hello from modal</p>
+</Modal>
+```
+
 
 ## Getting started
 Install dependencies:
@@ -91,5 +112,5 @@ Future components planned:
 - Dropdown
 - Tooltip
 
-## Autor
+### Autor
 Volodymyr Haran
